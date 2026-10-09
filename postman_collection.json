@@ -1,0 +1,410 @@
+{
+  "info": {
+    "_postman_id": "f911ef56-79ea-4ee4-9377-6680bc3d9bec",
+    "name": "task_management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58554127",
+    "_collection_link": "https://go.postman.co/collection/58554127-f911ef56-79ea-4ee4-9377-6680bc3d9bec?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Register User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Ayesha\",\r\n    \"email\": \"ayesha@example.com\",\r\n    \"password\": \"Test123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["register"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"ayesha@example.com\",\r\n    \"password\": \"Test123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Project",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\r\n{\r\n    \"name\": \"Task Management Project\",\r\n    \"description\": \"My first project\",\r\n    \"owner_id\": 2\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/projects",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["projects"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Projects",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/projects",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["projects"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Project By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/projects/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["projects", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Project",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Updated Task Management\",\r\n    \"description\": \"Updated project description\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/projects/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["projects", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Project",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/projects/2",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["projects", "2"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Task",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\r\n{\r\n    \"title\": \"Create contact page\",\r\n    \"description\": \"Build the contact page for the application\",\r\n    \"status\": \"pending\",\r\n    \"priority\": \"high\",\r\n    \"due_date\": \"2026-10-15\",\r\n    \"project_id\": 2,\r\n    \"assigned_to\": 1\r\n}\r\n  ",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/tasks",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["tasks"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Tasks",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/tasks",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["tasks"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Task By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/tasks/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["tasks", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Task",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"Complete login page\",\r\n    \"description\": \"Finish and test login page\",\r\n    \"status\": \"in_progress\",\r\n    \"priority\": \"high\",\r\n    \"due_date\": \"2026-10-15\",\r\n    \"project_id\": 1,\r\n    \"assigned_to\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/tasks/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["tasks", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Task",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/tasks/4",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["tasks", "4"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search Tasks by Status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/tasks/search?status=in_progress",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["tasks", "search"],
+          "query": [
+            {
+              "key": "status",
+              "value": "in_progress"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search Tasks by Title",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/tasks/search?title=login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["tasks", "search"],
+          "query": [
+            {
+              "key": "title",
+              "value": "login"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Overdue Tasks",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/tasks/overdue",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["tasks", "overdue"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Dashboard Statistics",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/dashboard",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["dashboard"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Tasks with Pagination",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/tasks?page=1&limit=5",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["tasks"],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Sort Tasks by Due Date (Ascending)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/tasks?sortBy=due_date&order=asc",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["tasks"],
+          "query": [
+            {
+              "key": "sortBy",
+              "value": "due_date"
+            },
+            {
+              "key": "order",
+              "value": "asc"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Tasks – Pagination and Priority Sorting",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/tasks?page=2&limit=3&sortBy=priority&order=desc",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["tasks"],
+          "query": [
+            {
+              "key": "page",
+              "value": "2"
+            },
+            {
+              "key": "limit",
+              "value": "3"
+            },
+            {
+              "key": "sortBy",
+              "value": "priority"
+            },
+            {
+              "key": "order",
+              "value": "desc"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
